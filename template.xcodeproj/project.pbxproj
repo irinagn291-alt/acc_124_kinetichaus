@@ -8,10 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		A527C74D2FDAFB5400A748ED /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BB01BB01BB01BB01BB01BB01 /* Alamofire */; };
+		A527C74E2FDAFB5400A748ED /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = EE01EE01EE01EE01EE01EE01 /* OneSignalFramework */; };
+		A527C74F2FDAFB5400A748ED /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = FF01FF01FF01FF01FF01FF01 /* OneSignalInAppMessages */; };
+		B527C7512FDAFB5400A748ED /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = HH01HH01HH01HH01HH01HH01 /* OneSignalExtension */; };
+		C527C7522FDAFB5400A748ED /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D527C7522FDAFB5400A748ED /* NotificationService.swift */; };
+		E527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1527C7542FDAFB5400A748ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26538C5692B7E812F99CFB7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29E09FC8E263817FDE407280;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2527C7552FDAFB5400A748ED /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A5A95D162FEA9BB10090F2E5 /* KineticHaus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "KineticHaus-Info.plist"; sourceTree = "<group>"; };
 		C01C7EC1B9DFF43BA7EF78EA /* KineticHaus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KineticHaus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D527C7522FDAFB5400A748ED /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		G527C7542FDAFB5400A748ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		H527C7552FDAFB5400A748ED /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,11 +57,21 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3527C7562FDAFB5400A748ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B527C7512FDAFB5400A748ED /* OneSignalExtension in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1F640DF223C2922AD49AF0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A527C74D2FDAFB5400A748ED /* Alamofire in Frameworks */,
+				A527C74E2FDAFB5400A748ED /* OneSignalFramework in Frameworks */,
+				A527C74F2FDAFB5400A748ED /* OneSignalInAppMessages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +81,9 @@
 		0A7087F33781F8B53F4EB4D1 = {
 			isa = PBXGroup;
 			children = (
+				A5A95D162FEA9BB10090F2E5 /* KineticHaus-Info.plist */,
 				E6C67FB82DBF9741885A334C /* template */,
+				4527C7572FDAFB5400A748ED /* OneSignalNotificationServiceExtension */,
 				373CB4B5FB8E8430945F4A13 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,8 +92,19 @@
 			isa = PBXGroup;
 			children = (
 				C01C7EC1B9DFF43BA7EF78EA /* KineticHaus.app */,
+				F527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4527C7572FDAFB5400A748ED /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D527C7522FDAFB5400A748ED /* NotificationService.swift */,
+				G527C7542FDAFB5400A748ED /* Info.plist */,
+				H527C7552FDAFB5400A748ED /* OneSignalNotificationServiceExtension.entitlements */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,10 +117,12 @@
 				D002CCCBE16C0AD7DE0D5E0B /* Sources */,
 				F1F640DF223C2922AD49AF0C /* Frameworks */,
 				C5CD1B5E3D946765FA663AE1 /* Resources */,
+				2527C7552FDAFB5400A748ED /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5527C7582FDAFB5400A748ED /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E6C67FB82DBF9741885A334C /* template */,
@@ -71,10 +130,32 @@
 			name = KineticHaus;
 			packageProductDependencies = (
 				BB01BB01BB01BB01BB01BB01 /* Alamofire */,
+				EE01EE01EE01EE01EE01EE01 /* OneSignalFramework */,
+				FF01FF01FF01FF01FF01FF01 /* OneSignalInAppMessages */,
 			);
 			productName = KineticHaus;
 			productReference = C01C7EC1B9DFF43BA7EF78EA /* KineticHaus.app */;
 			productType = "com.apple.product-type.application";
+		};
+		29E09FC8E263817FDE407280 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6527C7592FDAFB5400A748ED /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				4627C75A2FDAFB5400A748ED /* Sources */,
+				3527C7562FDAFB5400A748ED /* Frameworks */,
+				5627C75B2FDAFB5400A748ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+				HH01HH01HH01HH01HH01HH01 /* OneSignalExtension */,
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = F527C7532FDAFB5400A748ED /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -87,6 +168,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					28E09FC7E263817FDE40727F = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					29E09FC8E263817FDE407280 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -102,6 +186,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AA01AA01AA01AA01AA01AA01 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CC01CC01CC01CC01CC01CC01 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 373CB4B5FB8E8430945F4A13 /* Products */;
@@ -109,11 +194,19 @@
 			projectRoot = "";
 			targets = (
 				28E09FC7E263817FDE40727F /* KineticHaus */,
+				29E09FC8E263817FDE407280 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5627C75B2FDAFB5400A748ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5CD1B5E3D946765FA663AE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +217,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4627C75A2FDAFB5400A748ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C527C7522FDAFB5400A748ED /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D002CCCBE16C0AD7DE0D5E0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +233,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5527C7582FDAFB5400A748ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29E09FC8E263817FDE407280 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 1527C7542FDAFB5400A748ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		71ED7C53AD3EC7FB9DD50F72 /* Debug */ = {
@@ -198,18 +307,74 @@
 			};
 			name = Debug;
 		};
+		7527C75C2FDAFB5400A748ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinetichaus.app.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_PACKAGE_TYPE = "XPC!";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8527C75D2FDAFB5400A748ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kinetichaus.app.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_PACKAGE_TYPE = "XPC!";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		BF4407D2FD905E5E50557655 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = template/KineticHaus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KineticHaus-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ice KineticHaus";
+				INFOPLIST_KEY_OneSignal_app_groups_key = group.com.kinetichaus.app.onesignal;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
@@ -217,7 +382,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinetichaus.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -233,13 +398,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = template/KineticHaus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "KineticHaus-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Ice KineticHaus";
+				INFOPLIST_KEY_OneSignal_app_groups_key = group.com.kinetichaus.app.onesignal;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIBackgroundModes = "remote-notification";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
@@ -247,7 +416,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kinetichaus.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -327,6 +496,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6527C7592FDAFB5400A748ED /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7527C75C2FDAFB5400A748ED /* Debug */,
+				8527C75D2FDAFB5400A748ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7638074A2736FCB1C4C45C1B /* Build configuration list for PBXNativeTarget "KineticHaus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -347,6 +525,14 @@
 				kind = branch;
 			};
 		};
+		CC01CC01CC01CC01CC01CC01 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-XCFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -354,6 +540,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA01AA01AA01AA01AA01AA01 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		EE01EE01EE01EE01EE01EE01 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC01CC01CC01CC01CC01CC01 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalFramework;
+		};
+		FF01FF01FF01FF01FF01FF01 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC01CC01CC01CC01CC01CC01 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalInAppMessages;
+		};
+		HH01HH01HH01HH01HH01HH01 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC01CC01CC01CC01CC01CC01 /* XCRemoteSwiftPackageReference "OneSignal-XCFramework" */;
+			productName = OneSignalExtension;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

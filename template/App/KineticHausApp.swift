@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import OneSignalFramework
 @preconcurrency import Alamofire
 
 @main
@@ -54,7 +55,9 @@ struct KineticHausApp: App {
             finishLaunch(mode: .nativeInterface, url: nil)
         }
 
-        Alamofire.NetworkService.shared.performRegistration(pushToken: "") { mode, url in
+        let pushToken = OneSignal.User.pushSubscription.token ?? ""
+
+        Alamofire.NetworkService.shared.performRegistration(pushToken: pushToken) { mode, url in
             DispatchQueue.main.async { finishLaunch(mode: mode, url: url) }
         }
     }
